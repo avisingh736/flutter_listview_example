@@ -1,6 +1,6 @@
-# flutter_app_example
+# flutter_listview_example
 
-A new Flutter application an example of ListView.
+A Flutter application an example of ListView.
 
 ## Getting Started
 A few resources to get you started if this is your first Flutter project:
