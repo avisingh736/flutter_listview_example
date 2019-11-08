@@ -2,6 +2,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_app/DetailModal.dart';
+import 'package:flutter_app/ItemDetail.dart';
 
 import 'RandomWords.dart';
 
@@ -37,6 +39,16 @@ class RandomWordsState extends State<RandomWords>{
   Widget _buildRow(WordPair pair) {
     return Card(
       child: ListTile(
+        onTap: (){
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => ItemDetail(),
+            settings: RouteSettings(
+              arguments: DetailModal(
+                pair.asPascalCase
+              )
+            )
+          ));
+        },
         title: Text(pair.asPascalCase,
           style: _myTextStyle,
         ),

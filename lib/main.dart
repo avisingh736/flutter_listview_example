@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_app/ItemDetail.dart';
 import 'package:flutter_app/RandomWords.dart';
 
 void main() => runApp(MyApp());
@@ -22,7 +23,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: RandomWords(),
+      initialRoute: "/",
+      routes: {
+        "/" : (context) => RandomWords(),
+        ItemDetail.routeName : (context) => ItemDetail()
+      },
+      debugShowCheckedModeBanner: false,
+      //home: RandomWords(),
     );
   }
 }
